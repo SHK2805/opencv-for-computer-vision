@@ -19,6 +19,9 @@ class IOImage:
     def get_image(self):
         return self.image
 
+    def set_image(self, image):
+        self.image = image
+
     def read(self):
         return cv2.imread(self.path)
 
