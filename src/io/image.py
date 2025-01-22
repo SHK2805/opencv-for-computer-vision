@@ -6,7 +6,7 @@ from src.utils.common import show_image
 
 # read image
 class IOImage:
-    def __init__(self, path):
+    def __init__(self, path = '../../data/images/image.png'):
         if not path:
             raise ValueError('Path is empty')
 
@@ -59,6 +59,6 @@ class IOImage:
         show_image(self.image)
 
 if __name__ == '__main__':
-    io = IOImage('../../data/images/image.png')
+    io = IOImage()
     # io.write(input_image, '../../images/image_new.png')
     io.show()

@@ -26,7 +26,7 @@ class BlurImage(IOImage):
         self.blurred_image = cv2.GaussianBlur(self.image, kernel, sig_max)
         return self.blurred_image
 
-    def show(self):
+    def show_blur(self):
         show_image(self.blurred_image)
 
     def show_all(self):
@@ -49,5 +49,6 @@ if __name__ == '__main__':
     # image = blur.bilateral_filter()
     # image = blur.gaussian_blur()
     # blur.show()
+    # blur.show_blur()
     # blur.show_all()
     remove_noise('../../data/images/salt_and_pepper_noise.jpg')

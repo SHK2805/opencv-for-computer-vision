@@ -60,7 +60,7 @@ class ConvertColorSpace(IOImage):
         else:
             raise ValueError('Invalid color space')
 
-    def show(self):
+    def show_colors(self):
         show_image(self.converted_image)
 
 if __name__ == '__main__':
@@ -68,10 +68,10 @@ if __name__ == '__main__':
     convert_color_space = ConvertColorSpace(input_image_path)
 
     convert_color_space.convert_color_space(ColorSpaces.BGR)
-    convert_color_space.show()
+    convert_color_space.show_colors()
 
     convert_color_space.convert_color_space(ColorSpaces.GRAY)
-    convert_color_space.show()
+    convert_color_space.show_colors()
 
     convert_color_space.convert_color_space(ColorSpaces.HSV)
-    convert_color_space.show()
+    convert_color_space.show_colors()
