@@ -19,6 +19,15 @@ class IOImage:
     def get_image(self):
         return self.image
 
+    def get_path(self):
+        return self.path
+
+    def set_path(self, path):
+        self.path = path
+
+    def get_grey_image(self):
+        return cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)
+
     def set_image(self, image):
         self.image = image
 
